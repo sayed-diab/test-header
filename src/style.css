@@ -1,3 +1,7 @@
+.wfc {
+    width: 100% !important;
+}
+
 .wfc>div {
     justify-content: center !important;
 }

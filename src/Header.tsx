@@ -6,8 +6,8 @@ export default function Component() {
   return (
     <MegaMenu
       dir="rtl"
-      className="w-full wfc"
-      id="mega-menu-full-image"
+      className="w-full h-[70px] bg-yellow-50! wfc"
+      // id="mega-menu-full-image"
       aria-label="Mega menu example"
     >
       <NavbarBrand
@@ -22,22 +22,52 @@ export default function Component() {
       </NavbarBrand>
       <NavbarToggle className="ml-10!" />
       <NavbarCollapse>
-        <MegaMenuDropdownToggle>
+        <MegaMenuDropdownToggle
+          className="w-fit! active:text-black! text-black!" // id="mega-menu-full-image-dropdown"
+          id="menu-one"
+        >
           البرامج والدورات
-          <HiChevronDown className="ml-2" />
+          <HiChevronDown className="" />
         </MegaMenuDropdownToggle>
-        <NavbarLink href="#">Marketplace</NavbarLink>
-        <NavbarLink href="#">Resources</NavbarLink>
-        <NavbarLink href="#">Contact</NavbarLink>
+        <MegaMenuDropdownToggle
+          className="w-fit! active:text-black! text-black! py-2! ml-0"
+          id="menu-two"
+        >
+          الشهادات المعتمدة
+          <HiChevronDown className="" />
+        </MegaMenuDropdownToggle>
+        <NavbarLink href="#"></NavbarLink>
         <NavbarLink
-          className="text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+          className="w-fit! active:text-black! text-black! py-2!"
+          href="#"
+        >
+          نبذة عنا
+        </NavbarLink>
+        <NavbarLink
+          className="w-fit! active:text-black! text-black! py-2!"
+          href="#"
+        >
+          تواصل معنا
+        </NavbarLink>
+        <NavbarLink
+          className="w-fit! active:text-black! text-black! py-2! "
+          href="#"
+        >
+          بوابة الشركة
+        </NavbarLink>
+        <NavbarLink
+          className="w-fit! flex! text-white! bg-green-300 hover:bg-primary-800  text-xl rounded-lg  px-6! py-1! text-center"
           href="#"
         >
           اشترك الان
         </NavbarLink>
       </NavbarCollapse>
-      <MegaMenuDropdown>
-        <div className="mt-6 border-y border-gray-200 bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
+      <MegaMenuDropdown
+        className=" w-fit!"
+        id="menu-one"
+        aria-labelledby="mega-menu-full-image-dropdown"
+      >
+        <div className="mt-3 relative max-w-fit! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
           <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-sm text-gray-500 md:grid-cols-3 md:px-6 dark:text-gray-400">
             <ul
               className="mb-4 hidden space-y-4 md:mb-0 md:block"
@@ -46,90 +76,70 @@ export default function Component() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
                 >
-                  Online Stores
+                  برنامج شهادة المعلم الخبير المعتمد
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
                 >
-                  Segmentation
+                  برنامج شهادة تدريب المدربين المعتمد
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
                 >
-                  Marketing CRM
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
-                >
-                  Online Stores
+                  البرامج التأهيلية للمقاييس المعتمدة
                 </a>
               </li>
             </ul>
-            <ul className="mb-4 space-y-4 md:mb-0">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
-                >
-                  Our Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
-                >
-                  License
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary-600 hover:underline dark:hover:text-primary-500"
-                >
-                  Resources
-                </a>
-              </li>
-            </ul>
-            <a
-              href="#"
-              className="rounded-lg bg-gray-500 bg-cover bg-local bg-center bg-no-repeat p-8 text-left bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken"
-              style={{
-                backgroundImage: 'url("/dashboard-overview.png")',
-              }}
-            >
-              <p className="mb-5 max-w-xl font-extrabold leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
-              <button
-                type="button"
-                className="inline-flex items-center rounded-lg border border-white px-2.5 py-1.5 text-center text-xs font-medium text-white hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-700"
-              >
-                Get started
-                <HiArrowRight className="ml-2" />
-              </button>
-            </a>
           </div>
         </div>
       </MegaMenuDropdown>
-      <button className="btn"></button>
+      {/* <MegaMenuDropdown
+        className=" w-fit!"
+        id="menu-two"
+        // aria-labelledby="mega-menu-full-image-dropdown"
+      >
+        <div className="mt-3 relative max-w-fit! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
+          <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-sm text-gray-500 md:grid-cols-3 md:px-6 dark:text-gray-400">
+            <ul
+              className="mb-4 hidden space-y-4 md:mb-0 md:block"
+              aria-labelledby="mega-menu-full-image-button"
+            >
+              <li>
+                <a
+                  href="#"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                >
+                  برنامج شهادة المعلم الخبير المعتمد
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                >
+                  برنامج شهادة تدريب المدربين المعتمد
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-purple-50! hover:text-primary-600 hover:underline dark:hover:text-primary-500"
+                >
+                  البرامج التأهيلية للمقاييس المعتمدة
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </MegaMenuDropdown> */}
     </MegaMenu>
   );
 }
