@@ -5,9 +5,13 @@ import logo from './assets/Logo-CegZjA9A-2.png';
 import './style.css';
 
 export default function Component() {
-  const [openMenu, setOpenMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
 
-  const handleMenuToggle = (menuId) => {
+  interface HandleMenuToggleProps {
+    menuId: string;
+  }
+
+  const handleMenuToggle = (menuId: HandleMenuToggleProps['menuId']): void => {
     setOpenMenu(openMenu === menuId ? null : menuId);
   };
 
