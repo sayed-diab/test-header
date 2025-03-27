@@ -14,7 +14,6 @@ export default function Component() {
   const handleMenuToggle = (menuId: HandleMenuToggleProps['menuId']): void => {
     setOpenMenu(openMenu === menuId ? null : menuId);
   };
-
   return (
     <MegaMenu
       dir="rtl"
