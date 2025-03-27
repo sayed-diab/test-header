@@ -14,6 +14,7 @@ export default function Component() {
   const handleMenuToggle = (menuId: HandleMenuToggleProps['menuId']): void => {
     setOpenMenu(openMenu === menuId ? null : menuId);
   };
+
   return (
     <MegaMenu
       dir="rtl"
@@ -84,12 +85,12 @@ export default function Component() {
 
       {/* MegaMenu الأول */}
       <MegaMenuDropdown
-        className="wfit!"
+        className="w-fit! relative"
         id="menu-one"
         style={{ display: openMenu === 'menu-one' ? 'block' : 'none' }}
       >
-        <div className="mt-3 relative max-wfit! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
-          <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-sm text-gray-500 md:grid-cols-3 md:px-6 dark:text-gray-400">
+        <div className="mt-3 absolute top-3 left-55 w-[500px]! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
+          <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-sm text-gray-500 md:grid-cols-1 md:px-6 dark:text-gray-400">
             <ul className="mb-4 hidden space-y-4 md:mb-0 md:block">
               <li>
                 <a
@@ -122,12 +123,12 @@ export default function Component() {
 
       {/* MegaMenu الثاني */}
       <MegaMenuDropdown
-        className="w-fit!"
+        className="w-fit! relative"
         id="menu-two"
         style={{ display: openMenu === 'menu-two' ? 'block' : 'none' }}
       >
-        <div className="mt-3 relative w-fit! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
-          <div className="mx-auto grid max-w-[600px]!  px-4 py-5 text-sm text-gray-500 md:grid-cols-2 md:px-6 dark:text-gray-400">
+        <div className="mt-3 absolute top-3 left-20 w-[500px]! border-y border-gray-200 rounded-lg bg-white shadow-sm dark:border-gray-600 dark:bg-gray-800">
+          <div className="mx-auto grid max-w-[600px]!  px-4 py-5 text-sm text-gray-500 md:grid-cols-1 md:px-6 dark:text-gray-400">
             <ul className="mb-4 hidden space-y-4 md:mb-0 md:block">
               <li>
                 <a
